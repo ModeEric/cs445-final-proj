@@ -31,7 +31,7 @@ class TrackNetDataset(Dataset):
                 if len(image_names) < frame_info:
                     continue
 
-                for idx in range(frame_info-1, len(image_names)):
+                for idx in range(frame_info//2, len(image_names)-frame_info//2):
                     self.data.append({
                         'clip_path': clip_path,
                         'label_df': label_df,
@@ -47,7 +47,7 @@ class TrackNetDataset(Dataset):
         label_df = entry['label_df']
         center_idx = entry['center_idx']
         imgs = []
-        for i in range(center_idx - self.frame_info + 1, center_idx + 1):
+        for i in range(center_idx - self.frame_info//2, center_idx + self.frame_info//2 + 1):
             img_name = label_df.iloc[i]['file name']
             img_path = os.path.join(clip_path, img_name)
             img = Image.open(img_path).convert('RGB')
