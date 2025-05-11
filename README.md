@@ -4,5 +4,7 @@ Data link: https://drive.google.com/drive/folders/1xRSwGkX3MyESLVx36whvVmQdcbsWU
 
 
 TrackNet best model: model_best1.pth
+
 TrackNet VGG with ECA: model_best_eca1.pth
+
 TrackNet Both with ECA:model_best_eca2.pth
