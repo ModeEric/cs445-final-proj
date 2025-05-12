@@ -11,6 +11,12 @@ TrackNet VGG with ECA: model_best_eca1.pth
 
 TrackNet Both with ECA:model_best_eca2.pth
 
+File organization:
+Code folder: holds the dataset class, the tracknet model class, and train, validate, test, visualization scripts
+Result folder: contains three models, with their performances compared to each other
+Visualizations folder: contains pictures of visualizations of predictions our model makes for where the ball is
+TrackNet.ipynb: our model (with ECA) on tennis dataset
+TrackNet_padel.ipynb: our model (with ECA) on padel dataset
 
 
 To run this project:
